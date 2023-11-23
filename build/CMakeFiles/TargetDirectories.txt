@@ -1,3 +1,0 @@
-/home/pietro/Uni/laboratorio_di_programmazione/progetto_intermedio/progetto_intermedio/build/CMakeFiles/Bookshelf.dir
-/home/pietro/Uni/laboratorio_di_programmazione/progetto_intermedio/progetto_intermedio/build/CMakeFiles/edit_cache.dir
-/home/pietro/Uni/laboratorio_di_programmazione/progetto_intermedio/progetto_intermedio/build/CMakeFiles/rebuild_cache.dir
