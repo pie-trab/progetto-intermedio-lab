@@ -1,2 +1,2 @@
 # progetto_intermedio
-Progetto intermedio di laboratori di programmazione
+Progetto intermedio laboratorio di programmazione
