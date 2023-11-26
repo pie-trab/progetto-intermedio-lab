@@ -14,12 +14,12 @@ class Book
     };
 
     // todo reservation handling
-    Date _reservation_date;
+    Date _return_date;
 
     bool _is_available;
 
     bool is_valid_isbn(std::string isbn) const;
-    std::string strip_isbn(std::string isbn);
+    std::string strip_isbn(std::string isbn) const;
     bool is_return_in_time(const Date& date) const;
 
 public:
