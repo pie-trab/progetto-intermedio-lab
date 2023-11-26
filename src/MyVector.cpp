@@ -115,6 +115,7 @@ MyVector::MyVector(std::initializer_list<Book> lst) : size{(int)lst.size()}, cap
     std::copy(lst.begin(), lst.end(), buffer);
 }
 
-int MyVector::get_size() const{
+int MyVector::get_size() const
+{
     return size;
 }

@@ -1,3 +1,6 @@
+#ifndef BOOK_H
+#define BOOK_H
+
 #include <string>
 
 #include "Date.h"
@@ -47,3 +50,5 @@ public:
 std::ostream& operator<<(std::ostream& os, Book& b);
 bool operator==(const Book& a, const Book& b);
 bool operator!=(const Book& a, const Book& b);
+
+#endif

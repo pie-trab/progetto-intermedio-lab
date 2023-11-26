@@ -1,3 +1,6 @@
+#ifndef MYVECTOR_H
+#define MYVECTOR_H
+
 #include <string>
 
 #include "Book.h"
@@ -49,3 +52,4 @@ public:
         return "empty vector\n";
     }
 };
+#endif

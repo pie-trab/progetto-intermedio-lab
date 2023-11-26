@@ -1,3 +1,6 @@
+#ifndef BOOKSHELF_H
+#define BOOKSHELF_H
+
 #include "Book.h"
 #include "MyVector.h"
 
@@ -12,3 +15,4 @@ public:
     void push_back(Book myBook);
     Book pop_back();
 };
+#endif

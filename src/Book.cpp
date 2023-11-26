@@ -4,7 +4,6 @@
 
 Book::Book()
 {
-
 }
 /// Constructor
 /// @param name
@@ -37,9 +36,11 @@ Book::Book(std::string name, std::string surname, std::string title, std::string
 /// @return true: valid, false: invalid
 bool Book::is_valid_isbn(std::string isbn) const
 {
-    return strip_isbn(isbn).length() == 13;
+    return isbn.length() == 13;
+    // return strip_isbn(isbn).length() == 10;
 }
 
+/**
 /// Strips a string from special characters like '-' or spaces
 /// @param str
 /// @return stripped string
@@ -54,6 +55,7 @@ std::string Book::strip_isbn(std::string str) const
     }
     return out;
 }
+*/
 
 /// Checks if the return date is exceded
 /// @param date current date
@@ -80,7 +82,6 @@ void Book::reserve_book(Date date)
     }
 }
 
-/// Return book logic
 void Book::return_book()
 {
     if (_is_available) {
