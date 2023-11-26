@@ -27,6 +27,7 @@ public:
     Book pop_back();
     MyVector& operator=(const MyVector&);
     MyVector& operator=(MyVector&&);
+    int get_size() const;
 };
 
 // index out of range exception

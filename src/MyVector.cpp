@@ -94,7 +94,6 @@ MyVector::MyVector(MyVector&& myVector) : size{myVector.size}, capacity{myVector
     myVector.size = 0;
     myVector.capacity = INIT_CAPACITY;
     myVector.buffer = nullptr;
-
     std::cout << "costruttore di spostamento invocato\n";  // TODO
 }
 
@@ -114,4 +113,8 @@ MyVector& MyVector::operator=(MyVector&& myVector)
 MyVector::MyVector(std::initializer_list<Book> lst) : size{(int)lst.size()}, capacity{(int)lst.size()}, buffer{new Book[size]}
 {
     std::copy(lst.begin(), lst.end(), buffer);
+}
+
+int MyVector::get_size() const{
+    return size;
 }

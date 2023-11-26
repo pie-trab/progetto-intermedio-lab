@@ -4,6 +4,7 @@
 
 Book::Book()
 {
+
 }
 /// Constructor
 /// @param name
