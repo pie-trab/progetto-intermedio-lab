@@ -73,7 +73,6 @@ double MyVector::pop_back()
 MyVector::MyVector(const MyVector& myVector) : size{myVector.size}, capacity{myVector.capacity}, buffer{new double[myVector.size]}
 {
     std::copy(myVector.buffer, myVector.buffer + size, buffer);
-    std::cout << "costruttore di copia invocato\n";
 }
 
 MyVector& MyVector::operator=(const MyVector& myVector)
@@ -84,7 +83,6 @@ MyVector& MyVector::operator=(const MyVector& myVector)
     buffer = temp;
     size = myVector.size;
     capacity = myVector.capacity;
-    std::cout << "operatore di copia invocato\n";
     return *this;
 }
 
@@ -93,8 +91,6 @@ MyVector::MyVector(MyVector&& myVector) : size{myVector.size}, capacity{myVector
     myVector.size = 0;
     myVector.capacity = INIT_CAPACITY;
     myVector.buffer = nullptr;
-
-    std::cout << "costruttore di spostamento invocato\n";
 }
 
 MyVector& MyVector::operator=(MyVector&& myVector)
@@ -106,11 +102,14 @@ MyVector& MyVector::operator=(MyVector&& myVector)
     myVector.size = 0;
     myVector.capacity = INIT_CAPACITY;
     myVector.buffer = nullptr;
-    std::cout << "operatore di spostamento invocato\n";
     return *this;
 }
 
 MyVector::MyVector(std::initializer_list<double> lst) : size{(int)lst.size()}, capacity{(int)lst.size()}, buffer{new double[size]}
 {
     std::copy(lst.begin(), lst.end(), buffer);
+}
+
+int MyVector::get_size() const{
+    return size;
 }

@@ -25,6 +25,7 @@ public:
     double pop_back();
     MyVector& operator=(const MyVector&);
     MyVector& operator=(MyVector&&);
+    int get_size() const;
 };
 
 /*
