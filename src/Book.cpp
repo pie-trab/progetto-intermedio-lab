@@ -13,7 +13,7 @@ Book::Book()
 Book::Book(std::string name, std::string surname, std::string title, std::string isbn) : _auth_name{name}, _auth_surname{surname}, _title{title}
 {
     if (is_valid_isbn(isbn)) {
-        _isbn = strip_isbn(isbn);
+        _isbn = isbn;
     } else {
         throw IllegalArgument();
     }
@@ -67,7 +67,7 @@ bool Book::is_return_in_time(const Date& date) const
 
 /// Reserve book logic
 /// @param date current date
-void Book::reserve_book(Date date)
+void Book::reserve_book(const Date& date)
 {
     if (_is_available) {
         _is_available = false;
@@ -82,13 +82,17 @@ void Book::reserve_book(Date date)
     }
 }
 
-void Book::return_book()
+void Book::return_book(const Date& date)
 {
     if (_is_available) {
         std::cout << "Libro non prenotato." << '\n';
     } else {
         _is_available = true;
-        std::cout << "Libro restituito." << '\n';
+        if (date < _return_date) {
+            std::cout << "Libro restituito in tempo." << '\n';
+        } else {
+            std::cout << "Libro restituito in ritardo." << '\n';
+        }
     }
 }
 

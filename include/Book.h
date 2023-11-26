@@ -22,7 +22,7 @@ class Book
     bool _is_available;
 
     bool is_valid_isbn(std::string isbn) const;
-    std::string strip_isbn(std::string isbn) const;
+    // std::string strip_isbn(std::string isbn) const;
     bool is_return_in_time(const Date& date) const;
 
 public:
@@ -43,12 +43,11 @@ public:
     bool is_available() const { return _is_available; };
 
     // utilities functions
-    void reserve_book(Date reservation_date);
-    void return_book();
+    void reserve_book(const Date& date);
+    void return_book(const Date& date);
 };
 
 std::ostream& operator<<(std::ostream& os, Book& b);
 bool operator==(const Book& a, const Book& b);
 bool operator!=(const Book& a, const Book& b);
-
 #endif
