@@ -10,11 +10,11 @@ include_directories(include)
 
 add_library(${PROJECT_NAME} SHARED src/Book.cpp)
 
-#add_executable(main src/main.cpp)
+add_executable(main src/main.cpp)
 
 #set(GCC_COVERAGE_COMPILE_FLAGS "-fno-elide-constructors")
 
 #add_definitions(${GCC_COVERAGE_COMPILE_FLAGS})
 
-#target_link_libraries(main ${PROJECT_NAME})
+target_link_libraries(main ${PROJECT_NAME})
 

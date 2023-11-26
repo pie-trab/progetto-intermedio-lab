@@ -9,13 +9,18 @@ class Book
     std::string _auth_name;
     std::string _auth_surname;
     Date _cp_date;
+    class IllegalArgument
+    {
+    };
 
     // todo reservation handling
-    Date _reservation_date;
+    Date _return_date;
 
     bool _is_available;
 
-    bool is_valid_isbn(std::string isbn);
+    bool is_valid_isbn(std::string isbn) const;
+    std::string strip_isbn(std::string isbn) const;
+    bool is_return_in_time(const Date& date) const;
 
 public:
     // constructors
@@ -38,6 +43,7 @@ public:
     void reserve_book(Date reservation_date);
     void return_book();
 };
+
 std::ostream& operator<<(std::ostream& os, Book& b);
 bool operator==(const Book& a, const Book& b);
 bool operator!=(const Book& a, const Book& b);
