@@ -4,8 +4,7 @@
 
 Book::Book()
 {
-    // ?????
-}  // TODO
+}
 
 Book::Book(std::string name, std::string surname, std::string title, std::string isbn) : _auth_name{name}, _auth_surname{surname}, _title{title}
 {
@@ -22,30 +21,66 @@ Book::Book(std::string name, std::string surname, std::string title, std::string
     _cp_date = cp_date;  // TODO check if is a valid date
 }
 
-// if there are more restrictions on isbns
-bool Book::is_valid_isbn(std::string isbn)
+bool Book::is_valid_isbn(std::string isbn) const
 {
+    if (isbn.length() == 13) {
+    }
+
     return isbn.length() == 16;  // including dashes (-)
 }
 
-// TODO
+// formats isbn
+std::string Book::strip_isbn(std::string isbn)
+{
+    std::string out;
+    // checks for scpecial characters like '-'
+    for (int i = 0; i < isbn.length(); i++) {
+        if (isdigit(isbn[i])) {
+            out += isbn[i];
+        }
+    }
+
+    // returns if the stripped isbn is long 13 digits
+    if (isbn.length() == 13) {
+        return isbn;
+    } else {
+        throw Book::IllegalArgument();
+    }
+}
+
 void Book::reserve_book(Date reservation_date)
 {
     if (_is_available) {
         _is_available = false;
-    }  // messaggio libro prenotato ??
-    else {
-    }  // messaggio libro non prenotato ??
+        _reservation_date = reservation_date;
+        _reservation_date.add_month(1);  // add custom time
+    } else {
+        if (is_return_in_time(reservation_date)) {
+            std::cout << "Libro occupato."
+                      << "\n";
+        } else {
+            std::cout << "Libro occupato fuori dal periodo di prenotazione."
+                      << "\n";
+        }
+    }
 }
+
 void Book::return_book()
 {
-    if (!_is_available) {
+    if (_is_available) {
+        std::cout << "Libro non prenotato."
+                  << "\n";
+    } else {
         _is_available = true;
-    }  // messaggio libro restituito ??
-    else {
-    }  // messaggio libro non restituito ??
+        std::cout << "Libro restituito."
+                  << "\n";
+    }
 }
-// ETODO
+
+bool Book::is_return_in_time(const Date& date) const
+{
+    return date <= (_reservation_date + date);
+}
 
 bool operator==(const Book& a, const Book& b)
 {

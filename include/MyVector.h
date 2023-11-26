@@ -1,11 +1,13 @@
 #include <string>
 
+#include "Book.h"
+
 class MyVector
 {
 private:
     int size;
     int capacity;
-    double* buffer;
+    Book* buffer;
 
     void reserve(int);
 
@@ -15,21 +17,19 @@ public:
     ~MyVector();
     MyVector(const MyVector&);
     MyVector(MyVector&&);
-    MyVector(std::initializer_list<double>);
+    MyVector(std::initializer_list<Book>);
 
-    double operator[](int) const;
-    double& operator[](int);
-    const double& at(int) const;
-    double& at(int);
-    void push_back(double);
-    double pop_back();
+    Book operator[](int) const;
+    Book& operator[](int);
+    const Book& at(int) const;
+    Book& at(int);
+    void push_back(Book);
+    Book pop_back();
     MyVector& operator=(const MyVector&);
     MyVector& operator=(MyVector&&);
 };
 
-/*
- * index out of range exception
- * */
+// index out of range exception
 class out_of_range
 {
 public:
@@ -39,9 +39,7 @@ public:
     }
 };
 
-/*
- * empty vector exception
- * */
+//  empty vector exception
 class empty_vector
 {
 public:

@@ -1,29 +1,30 @@
 #include "../include/MyVector.h"
+#include "../include/Book.h"
 
 #include <iostream>
 
 constexpr int INIT_CAPACITY = 1;
 
-MyVector::MyVector() : size{0}, capacity{INIT_CAPACITY}, buffer{new double[INIT_CAPACITY]} {}
+MyVector::MyVector() : size{0}, capacity{INIT_CAPACITY}, buffer{new Book[INIT_CAPACITY]} {}
 
-MyVector::MyVector(int n) : size{0}, capacity{n}, buffer{new double[capacity]} {}
+MyVector::MyVector(int n) : size{0}, capacity{n}, buffer{new Book[capacity]} {}
 
 MyVector::~MyVector()
 {
     delete[] buffer;
 }
 
-double MyVector::operator[](int i) const
+Book MyVector::operator[](int i) const
 {
     return buffer[i];
 }
 
-double& MyVector::operator[](int i)
+Book& MyVector::operator[](int i)
 {
     return buffer[i];
 }
 
-const double& MyVector::at(int i) const
+const Book& MyVector::at(int i) const
 {
     if (i >= 0 && i < size) {
         return buffer[i];
@@ -31,7 +32,7 @@ const double& MyVector::at(int i) const
     throw out_of_range();
 }
 
-double& MyVector::at(int i)
+Book& MyVector::at(int i)
 {
     if (i >= 0 && i < size) {
         return buffer[i];
@@ -42,7 +43,7 @@ double& MyVector::at(int i)
 void MyVector::reserve(int n)
 {
     if (n > capacity) {
-        double* temp = new double[n];
+        Book* temp = new Book[n];
         for (int i = 0; i < size; i++) {
             temp[i] = buffer[i];
         }
@@ -52,7 +53,7 @@ void MyVector::reserve(int n)
     }
 }
 
-void MyVector::push_back(double elem)
+void MyVector::push_back(Book elem)
 {
     if (size == capacity) {
         reserve(2 * capacity);
@@ -61,7 +62,7 @@ void MyVector::push_back(double elem)
     size++;
 }
 
-double MyVector::pop_back()
+Book MyVector::pop_back()
 {
     if (size > 0) {
         size--;
@@ -70,21 +71,21 @@ double MyVector::pop_back()
     throw empty_vector();
 }
 
-MyVector::MyVector(const MyVector& myVector) : size{myVector.size}, capacity{myVector.capacity}, buffer{new double[myVector.size]}
+MyVector::MyVector(const MyVector& myVector) : size{myVector.size}, capacity{myVector.capacity}, buffer{new Book[myVector.size]}
 {
     std::copy(myVector.buffer, myVector.buffer + size, buffer);
-    std::cout << "costruttore di copia invocato\n";
+    std::cout << "costruttore di copia invocato\n";  // TODO
 }
 
 MyVector& MyVector::operator=(const MyVector& myVector)
 {
-    double* temp = new double[myVector.size];
+    Book* temp = new Book[myVector.size];
     std::copy(myVector.buffer, myVector.buffer + myVector.size, temp);
     delete[] buffer;
     buffer = temp;
     size = myVector.size;
     capacity = myVector.capacity;
-    std::cout << "operatore di copia invocato\n";
+    std::cout << "operatore di copia invocato\n";  // TODO
     return *this;
 }
 
@@ -94,7 +95,7 @@ MyVector::MyVector(MyVector&& myVector) : size{myVector.size}, capacity{myVector
     myVector.capacity = INIT_CAPACITY;
     myVector.buffer = nullptr;
 
-    std::cout << "costruttore di spostamento invocato\n";
+    std::cout << "costruttore di spostamento invocato\n";  // TODO
 }
 
 MyVector& MyVector::operator=(MyVector&& myVector)
@@ -106,11 +107,11 @@ MyVector& MyVector::operator=(MyVector&& myVector)
     myVector.size = 0;
     myVector.capacity = INIT_CAPACITY;
     myVector.buffer = nullptr;
-    std::cout << "operatore di spostamento invocato\n";
+    std::cout << "operatore di spostamento invocato\n";  // TODO
     return *this;
 }
 
-MyVector::MyVector(std::initializer_list<double> lst) : size{(int)lst.size()}, capacity{(int)lst.size()}, buffer{new double[size]}
+MyVector::MyVector(std::initializer_list<Book> lst) : size{(int)lst.size()}, capacity{(int)lst.size()}, buffer{new Book[size]}
 {
     std::copy(lst.begin(), lst.end(), buffer);
 }
