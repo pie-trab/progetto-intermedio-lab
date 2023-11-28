@@ -16,10 +16,6 @@ private:
     bool is_leap_year();  // checks if the year is a leap year
     void add_one_day();   // adds one day to the current date time
 
-    class Invalid
-    {
-    };
-
 public:
     Date();
     Date(int, Month, int);
@@ -31,6 +27,10 @@ public:
     void add_day(int);
     void add_month(int);
     void add_year(int);
+};
+
+class Invalid
+{
 };
 
 std::ostream& operator<<(std::ostream&, const Date&);

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['reserve_5fbook_30',['reserve_book',['../classBook.html#a0cc27ef26a8d3227940bc46399a00a54',1,'Book']]],
-  ['return_5fbook_31',['return_book',['../classBook.html#a16f5d629a5e8ade1ce4b1fec13bc09ff',1,'Book']]]
+  ['operator_3d_38',['operator=',['../classBookShelf.html#a29ad26f291d3db9e8874905f5f221d12',1,'BookShelf::operator=(const BookShelf &amp;)'],['../classBookShelf.html#a5c3094b264c0392d5c46e8c197e93691',1,'BookShelf::operator=(BookShelf &amp;&amp;)']]],
+  ['operator_5b_5d_39',['operator[]',['../classBookShelf.html#a88e5c82bb221fdd6f6e3443f8c9ff687',1,'BookShelf::operator[](int) const'],['../classBookShelf.html#a41ba912b3c06f052ed0cc011e0a9c476',1,'BookShelf::operator[](int)']]]
 ];

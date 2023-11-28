@@ -3,27 +3,132 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}\label{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}} 
+\mbox{\hyperlink{classDate_a4e59ed4ba66eec61c27460c5d09fa1bd}{Date}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classDate}{Date}}\+:\+: \mbox{\hyperlink{classDate}{Date}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDate_a460cb3d8962aee84de8f33a4987b4188}{Date}} (int, Month, int)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classDate}{Date}}\+:\+: \mbox{\hyperlink{classDate}{Date}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}{year}} () const
+\begin{DoxyCompactList}\small\item\em Get year. \end{DoxyCompactList}\item 
+Month \mbox{\hyperlink{classDate_a8c42aa13d3199b30a16c4c9220deada9}{month}} () const
+\begin{DoxyCompactList}\small\item\em Get month. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDate_a42aff770b2b450b6b2d83789b9194d56}{day}} () const
+\begin{DoxyCompactList}\small\item\em Get day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDate_aada1f9695f62a3644a8d855f00d062d2}{add\+\_\+day}} (int)
+\begin{DoxyCompactList}\small\item\em Add n day. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDate_ae0c273727afe6f83d358d9468b47f7a2}{add\+\_\+month}} (int)
+\begin{DoxyCompactList}\small\item\em Adds n months. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDate_a4ab59f58f7840892bfb6239835558a49}{add\+\_\+year}} (int)
+\begin{DoxyCompactList}\small\item\em Adds n years. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classDate_a460cb3d8962aee84de8f33a4987b4188}\label{classDate_a460cb3d8962aee84de8f33a4987b4188}} 
-{\bfseries Date} (int, Month, int)
-\item 
-\mbox{\Hypertarget{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}\label{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}} 
-int {\bfseries year} () const
-\item 
-\mbox{\Hypertarget{classDate_a8c42aa13d3199b30a16c4c9220deada9}\label{classDate_a8c42aa13d3199b30a16c4c9220deada9}} 
-Month {\bfseries month} () const
-\item 
-\mbox{\Hypertarget{classDate_a42aff770b2b450b6b2d83789b9194d56}\label{classDate_a42aff770b2b450b6b2d83789b9194d56}} 
-int {\bfseries day} () const
-\item 
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{Date()}{Date()}}
+{\footnotesize\ttfamily Date\+::\+Date (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{Month}]{m,  }\item[{int}]{d }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classDate}{Date}}\+:\+: \mbox{\hyperlink{classDate}{Date}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em y} & year \\
+\hline
+{\em m} & month \\
+\hline
+{\em d} & day \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classDate_aada1f9695f62a3644a8d855f00d062d2}\label{classDate_aada1f9695f62a3644a8d855f00d062d2}} 
-void {\bfseries add\+\_\+day} (int)
-\item 
+\index{Date@{Date}!add\_day@{add\_day}}
+\index{add\_day@{add\_day}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{add\_day()}{add\_day()}}
+{\footnotesize\ttfamily void Date\+::add\+\_\+day (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Add n day. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & days to add \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classDate_ae0c273727afe6f83d358d9468b47f7a2}\label{classDate_ae0c273727afe6f83d358d9468b47f7a2}} 
-void {\bfseries add\+\_\+month} (int)
-\item 
+\index{Date@{Date}!add\_month@{add\_month}}
+\index{add\_month@{add\_month}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{add\_month()}{add\_month()}}
+{\footnotesize\ttfamily void Date\+::add\+\_\+month (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Adds n months. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & months to add \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{classDate_a4ab59f58f7840892bfb6239835558a49}\label{classDate_a4ab59f58f7840892bfb6239835558a49}} 
-void {\bfseries add\+\_\+year} (int)
-\end{DoxyCompactItemize}
+\index{Date@{Date}!add\_year@{add\_year}}
+\index{add\_year@{add\_year}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{add\_year()}{add\_year()}}
+{\footnotesize\ttfamily void Date\+::add\+\_\+year (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Adds n years. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & years to add \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDate_a42aff770b2b450b6b2d83789b9194d56}\label{classDate_a42aff770b2b450b6b2d83789b9194d56}} 
+\index{Date@{Date}!day@{day}}
+\index{day@{day}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{day()}{day()}}
+{\footnotesize\ttfamily int Date\+::day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get day. 
+
+\begin{DoxyReturn}{Returns}
+int day 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_a8c42aa13d3199b30a16c4c9220deada9}\label{classDate_a8c42aa13d3199b30a16c4c9220deada9}} 
+\index{Date@{Date}!month@{month}}
+\index{month@{month}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{month()}{month()}}
+{\footnotesize\ttfamily Month Date\+::month (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get month. 
+
+\begin{DoxyReturn}{Returns}
+Month month 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}\label{classDate_adb59de8d1ac3b04cbd57be3b551be2dc}} 
+\index{Date@{Date}!year@{year}}
+\index{year@{year}!Date@{Date}}
+\doxysubsubsection{\texorpdfstring{year()}{year()}}
+{\footnotesize\ttfamily int Date\+::year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get year. 
+
+\begin{DoxyReturn}{Returns}
+int year 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
