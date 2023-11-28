@@ -1,0 +1,123 @@
+\hypertarget{classBook}{}\doxysection{Book Class Reference}
+\label{classBook}\index{Book@{Book}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBook_ae78a03a13259936379b88f7a822db353}{Book}} (std\+::string name, std\+::string surname, std\+::string title, std\+::string isbn)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBook_a6834e4f83740f9328780478fbebf0277}{Book}} (std\+::string name, std\+::string surname, std\+::string title, std\+::string isbn, \mbox{\hyperlink{classDate}{Date}} cp\+\_\+date)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classBook_aa8df24f43320f7740660e57cf446e0ba}\label{classBook_aa8df24f43320f7740660e57cf446e0ba}} 
+std\+::string {\bfseries get\+\_\+isbn} () const
+\item 
+\mbox{\Hypertarget{classBook_ae38c923e3a9a62d716ccdaa6815345ba}\label{classBook_ae38c923e3a9a62d716ccdaa6815345ba}} 
+std\+::string {\bfseries get\+\_\+title} () const
+\item 
+\mbox{\Hypertarget{classBook_aee5a55effd26495887afc1cdb39904ef}\label{classBook_aee5a55effd26495887afc1cdb39904ef}} 
+std\+::string {\bfseries get\+\_\+auth\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classBook_a0c4d10c9256038c7516ac6ec45a1e525}\label{classBook_a0c4d10c9256038c7516ac6ec45a1e525}} 
+std\+::string {\bfseries get\+\_\+auth\+\_\+surname} () const
+\item 
+\mbox{\Hypertarget{classBook_a82818ecf1363a60cd974ec53d7db0714}\label{classBook_a82818ecf1363a60cd974ec53d7db0714}} 
+std\+::string {\bfseries get\+\_\+full\+\_\+name} () const
+\item 
+\mbox{\Hypertarget{classBook_a5918b47b7fab8c9c3e8d1f07ec51b7ee}\label{classBook_a5918b47b7fab8c9c3e8d1f07ec51b7ee}} 
+\mbox{\hyperlink{classDate}{Date}} {\bfseries get\+\_\+cp\+\_\+date} () const
+\item 
+\mbox{\Hypertarget{classBook_ab58e5bdee0f7a345c380f287e6fac79f}\label{classBook_ab58e5bdee0f7a345c380f287e6fac79f}} 
+bool {\bfseries is\+\_\+available} () const
+\item 
+\mbox{\Hypertarget{classBook_a2e87f3e86175a61bfb6347dd38a4616b}\label{classBook_a2e87f3e86175a61bfb6347dd38a4616b}} 
+void {\bfseries set\+\_\+cp\+\_\+date} (const \mbox{\hyperlink{classDate}{Date}} cp\+\_\+date)
+\item 
+void \mbox{\hyperlink{classBook_a0cc27ef26a8d3227940bc46399a00a54}{reserve\+\_\+book}} (const \mbox{\hyperlink{classDate}{Date}} \&date)
+\begin{DoxyCompactList}\small\item\em Reserve book logic. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBook_a16f5d629a5e8ade1ce4b1fec13bc09ff}{return\+\_\+book}} (const \mbox{\hyperlink{classDate}{Date}} \&date)
+\begin{DoxyCompactList}\small\item\em Return book logic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBook_ae78a03a13259936379b88f7a822db353}\label{classBook_ae78a03a13259936379b88f7a822db353}} 
+\index{Book@{Book}!Book@{Book}}
+\index{Book@{Book}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{Book()}{Book()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Book\+::\+Book (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{surname,  }\item[{std\+::string}]{title,  }\item[{std\+::string}]{isbn }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & author name \\
+\hline
+{\em surname} & author surname \\
+\hline
+{\em title} & book\textquotesingle{}s title \\
+\hline
+{\em isbn} & book\textquotesingle{}s isbn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBook_a6834e4f83740f9328780478fbebf0277}\label{classBook_a6834e4f83740f9328780478fbebf0277}} 
+\index{Book@{Book}!Book@{Book}}
+\index{Book@{Book}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{Book()}{Book()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Book\+::\+Book (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{std\+::string}]{surname,  }\item[{std\+::string}]{title,  }\item[{std\+::string}]{isbn,  }\item[{\mbox{\hyperlink{classDate}{Date}}}]{cp\+\_\+date }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & author name \\
+\hline
+{\em surname} & author surname \\
+\hline
+{\em title} & book\textquotesingle{}s title \\
+\hline
+{\em isbn} & book\textquotesingle{}s isbn \\
+\hline
+{\em cp\+\_\+date} & copyright date expire \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBook_a0cc27ef26a8d3227940bc46399a00a54}\label{classBook_a0cc27ef26a8d3227940bc46399a00a54}} 
+\index{Book@{Book}!reserve\_book@{reserve\_book}}
+\index{reserve\_book@{reserve\_book}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{reserve\_book()}{reserve\_book()}}
+{\footnotesize\ttfamily void Book\+::reserve\+\_\+book (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDate}{Date}} \&}]{date }\end{DoxyParamCaption})}
+
+
+
+Reserve book logic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & current date \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBook_a16f5d629a5e8ade1ce4b1fec13bc09ff}\label{classBook_a16f5d629a5e8ade1ce4b1fec13bc09ff}} 
+\index{Book@{Book}!return\_book@{return\_book}}
+\index{return\_book@{return\_book}!Book@{Book}}
+\doxysubsubsection{\texorpdfstring{return\_book()}{return\_book()}}
+{\footnotesize\ttfamily void Book\+::return\+\_\+book (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classDate}{Date}} \&}]{date }\end{DoxyParamCaption})}
+
+
+
+Return book logic. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & current date \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Book.\+h\item 
+src/Book.\+cpp\end{DoxyCompactItemize}
