@@ -33,23 +33,4 @@ public:
     int get_size() const;
 };
 
-// index out of range exception
-class out_of_range
-{
-public:
-    std::string get_message()
-    {
-        return "index out of range\n";
-    }
-};
-
-//  empty vector exception
-class empty_vector
-{
-public:
-    std::string get_message()
-    {
-        return "empty vector\n";
-    }
-};
 #endif

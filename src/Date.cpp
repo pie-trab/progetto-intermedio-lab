@@ -1,4 +1,5 @@
 #include "../include/Date.h"
+#include "../include/Exception.h"
 
 /**
  * @brief Construct a new Date:: Date object
@@ -16,7 +17,7 @@ Date::Date() : _d{1}, _m{Month::jan}, _y{MIN_YEAR} {}
 Date::Date(int y, Month m, int d) : _y{y}, _m{m}, _d{d}
 {
     if (!is_valid()) {
-        throw Invalid{};
+        throw Exception("Date is not valid");
     }
 }
 
@@ -104,7 +105,7 @@ bool Date::is_valid()
 void Date::add_year(int n)
 {
     if (_y + n > MAX_YEAR) {
-        throw Invalid{};
+        throw Exception("Exceded max year limit");
     }
     _y += n;
 }
@@ -298,7 +299,7 @@ bool operator>=(const Date& d1, const Date& d2)
  */
 Date operator+(const Date& d1, const Date& d2)
 {
-    Date sum{d1.day(), d1.month(), d1.year()};
+    Date sum = d1;
     sum.add_year(d2.year());
     sum.add_month(int(d2.month()));
     sum.add_day(d2.day());

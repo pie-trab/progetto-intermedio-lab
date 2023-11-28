@@ -1,5 +1,6 @@
 #include "../include/BookShelf.h"
 #include "../include/Book.h"
+#include "../include/Exception.h"
 
 #include <iostream>
 
@@ -45,7 +46,6 @@ BookShelf::BookShelf(std::initializer_list<Book> lst) : size{(int)lst.size()}, c
 BookShelf::BookShelf(const BookShelf& BookShelf) : size{BookShelf.size}, capacity{BookShelf.capacity}, buffer{new Book[BookShelf.size]}
 {
     std::copy(BookShelf.buffer, BookShelf.buffer + size, buffer);
-    std::cout << "costruttore di copia invocato\n";  // TODO
 }
 
 /**
@@ -58,7 +58,6 @@ BookShelf::BookShelf(BookShelf&& BookShelf) : size{BookShelf.size}, capacity{Boo
     BookShelf.size = 0;
     BookShelf.capacity = INIT_CAPACITY;
     BookShelf.buffer = nullptr;
-    std::cout << "costruttore di spostamento invocato\n";  // TODO
 }
 
 /**
@@ -94,7 +93,7 @@ const Book& BookShelf::at(int i) const
     if (i >= 0 && i < size) {
         return buffer[i];
     }
-    throw out_of_range();
+    throw Exception("Out of range");
 }
 
 /**
@@ -108,7 +107,7 @@ Book& BookShelf::at(int i)
     if (i >= 0 && i < size) {
         return buffer[i];
     }
-    throw out_of_range();
+    throw Exception("Out of range");
 }
 
 /**
@@ -136,7 +135,7 @@ Book BookShelf::pop_back()
         size--;
         return buffer[size];
     }
-    throw empty_vector();
+    throw Exception("Empty vector");
 }
 
 /**
@@ -153,7 +152,6 @@ BookShelf& BookShelf::operator=(const BookShelf& BookShelf)
     buffer = temp;
     size = BookShelf.size;
     capacity = BookShelf.capacity;
-    std::cout << "operatore di copia invocato\n";  // TODO
     return *this;
 }
 
@@ -172,7 +170,6 @@ BookShelf& BookShelf::operator=(BookShelf&& BookShelf)
     BookShelf.size = 0;
     BookShelf.capacity = INIT_CAPACITY;
     BookShelf.buffer = nullptr;
-    std::cout << "operatore di spostamento invocato\n";  // TODO
     return *this;
 }
 

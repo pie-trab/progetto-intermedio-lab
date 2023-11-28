@@ -1,6 +1,11 @@
 #include "../include/Book.h"
+#include "../include/Exception.h"
 
 #include <iostream>
+
+Book::Book()
+{
+}
 
 /**
  * @brief Construct a new Book:: Book object
@@ -15,7 +20,7 @@ Book::Book(std::string name, std::string surname, std::string title, std::string
     if (is_valid_isbn(isbn)) {
         _isbn = isbn;
     } else {
-        throw IllegalArgument();
+        throw Exception("Isbn is not valid");
     }
 }
 
@@ -46,9 +51,9 @@ void Book::reserve_book(const Date& date)
         _return_date.add_month(1);  // add custom time
     } else {
         if (is_return_in_time(date)) {
-            std::cout << "Libro occupato." << '\n';
+            std::cout << "The selected book is alredy reserved." << '\n';
         } else {
-            std::cout << "Libro occupato fuori dal periodo di prenotazione." << '\n';
+            std::cout << "The selected book is alredy reserved and is late for the return." << '\n';
         }
     }
 }
@@ -61,13 +66,13 @@ void Book::reserve_book(const Date& date)
 void Book::return_book(const Date& date)
 {
     if (_is_available) {
-        std::cout << "Libro non prenotato." << '\n';
+        std::cout << "The selected book is not reserved." << '\n';
     } else {
         _is_available = true;
         if (date < _return_date) {
-            std::cout << "Libro restituito in tempo." << '\n';
+            std::cout << "Book returned in time." << '\n';
         } else {
-            std::cout << "Libro restituito in ritardo." << '\n';
+            std::cout << "Book returned late." << '\n';
         }
     }
 }
@@ -84,23 +89,6 @@ bool Book::is_valid_isbn(std::string isbn) const
     return isbn.length() == 13;
     // return strip_isbn(isbn).length() == 10;
 }
-
-/**
-/// Strips a string from special characters like '-' or spaces
-/// @param str
-/// @return stripped string
-std::string Book::strip_isbn(std::string str) const
-{
-    std::string out;
-    // checks for non-digit characters like '-'
-    for (int i = 0; i < str.length(); i++) {
-        if (isdigit(str[i])) {
-            out += str[i];
-        }
-    }
-    return out;
-}
-*/
 
 /**
  * @brief Checks if the return date is exceded

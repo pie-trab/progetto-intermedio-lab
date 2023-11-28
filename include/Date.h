@@ -32,10 +32,6 @@ public:
     void add_year(int);
 };
 
-class Invalid
-{
-};
-
 std::ostream& operator<<(std::ostream&, const Date&);
 bool operator==(const Date&, const Date&);
 bool operator!=(const Date&, const Date&);
