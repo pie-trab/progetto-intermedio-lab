@@ -2,9 +2,8 @@
 
 #include <iostream>
 
-Book::Book()
-{
-}
+Book::Book() {}
+
 /// Constructor
 /// @param name
 /// @param surname
