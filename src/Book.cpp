@@ -3,9 +3,11 @@
 
 #include <iostream>
 
-Book::Book()
-{
-}
+/**
+ * @brief Construct a new Book:: Book object
+ *
+ */
+Book::Book() {}
 
 /**
  * @brief Construct a new Book:: Book object
@@ -41,20 +43,13 @@ Book::Book(std::string name, std::string surname, std::string title, std::string
 /**
  * @brief Reserve book logic
  *
- * @param date current date
  */
-void Book::reserve_book(const Date& date)
+void Book::reserve_book()
 {
     if (_is_available) {
         _is_available = false;
-        _return_date = date;
-        _return_date.add_month(1);  // add custom time
     } else {
-        if (is_return_in_time(date)) {
-            std::cout << "The selected book is alredy reserved." << '\n';
-        } else {
-            std::cout << "The selected book is alredy reserved and is late for the return." << '\n';
-        }
+        throw Exception("Alredy reserved.");
     }
 }
 
@@ -63,17 +58,12 @@ void Book::reserve_book(const Date& date)
  *
  * @param date current date
  */
-void Book::return_book(const Date& date)
+void Book::return_book()
 {
     if (_is_available) {
-        std::cout << "The selected book is not reserved." << '\n';
+        throw Exception("Not reserved.");
     } else {
         _is_available = true;
-        if (date < _return_date) {
-            std::cout << "Book returned in time." << '\n';
-        } else {
-            std::cout << "Book returned late." << '\n';
-        }
     }
 }
 
@@ -91,20 +81,7 @@ bool Book::is_valid_isbn(std::string isbn) const
 }
 
 /**
- * @brief Checks if the return date is exceded
- *
- * @param date current date
- * @return true return date exceded
- * @return false return date not exceded
- */
-bool Book::is_return_in_time(const Date& date) const
-{
-    return _return_date > date;
-}
-
-/**
  * @brief Equals operator overload
-
  *
  * @param a first book to compare
  * @param b second book to compare
@@ -118,7 +95,6 @@ bool operator==(const Book& a, const Book& b)
 
 /**
  * @brief Not-equals operator overload
-
  *
  * @param a first book to compare
  * @param b second book to compare

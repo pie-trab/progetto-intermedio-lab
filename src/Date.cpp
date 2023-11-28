@@ -98,93 +98,6 @@ bool Date::is_valid()
 }
 
 /**
- * @brief Adds n years
- *
- * @param n years to add
- */
-void Date::add_year(int n)
-{
-    if (_y + n > MAX_YEAR) {
-        throw Exception("Exceded max year limit");
-    }
-    _y += n;
-}
-
-/**
- * @brief Adds n months
- *
- * @param n months to add
- */
-void Date::add_month(int n)
-{
-    if (int(_m) + n > int(Month::dec)) {
-        _m = Month((int(_m) + n) % int(Month::dec));
-        add_year((int(_m) + n) / int(Month::dec));
-    } else {
-        _m = Month(int(_m) + n);
-    }
-}
-
-/**
- * @brief Adds one day
- *
- */
-void Date::add_one_day()
-{
-    if (_m == Month::nov || _m == Month::apr || _m == Month::jun || _m == Month::sep) {
-        if (_d + 1 > 30) {
-            add_month(1);
-            _d = 1;
-        } else {
-            _d++;
-        }
-    } else if (_m == Month::feb) {
-        if (is_leap_year()) {
-            if (_d + 1 > 29) {
-                add_month(1);
-                _d = 1;
-            } else {
-                _d++;
-            }
-        } else {
-            if (_d + 1 > 28) {
-                add_month(1);
-                _d = 1;
-            } else {
-                _d++;
-            }
-        }
-    } else if (_m == Month::dec) {
-        if (_d + 1 > 31) {
-            add_year(1);
-            add_month(1);
-            _d = 1;
-        } else {
-            _d++;
-        }
-    } else {
-        if (_d + 1 > 31) {
-            add_month(1);
-            _d = 1;
-        } else {
-            _d++;
-        }
-    }
-}
-
-/**
- * @brief Add n day
- *
- * @param n days to add
- */
-void Date::add_day(int n)
-{
-    for (int i = 0; i < n; i++) {
-        add_one_day();
-    }
-}
-
-/**
  * @brief Ostream operator overload
  *
  * @param os os stream
@@ -288,20 +201,4 @@ bool operator<=(const Date& d1, const Date& d2)
 bool operator>=(const Date& d1, const Date& d2)
 {
     return (d1 > d2) || (d1 == d2);
-}
-
-/**
- * @brief Sum operator overload
- *
- * @param d1 first date to sum
- * @param d2 second date to sum
- * @return Date
- */
-Date operator+(const Date& d1, const Date& d2)
-{
-    Date sum = d1;
-    sum.add_year(d2.year());
-    sum.add_month(int(d2.month()));
-    sum.add_day(d2.day());
-    return sum;
 }

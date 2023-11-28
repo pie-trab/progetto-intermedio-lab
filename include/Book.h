@@ -12,11 +12,9 @@ class Book
     std::string _auth_name{"Jhon"};
     std::string _auth_surname{"Doe"};
     Date _cp_date;
-    Date _return_date;
     bool _is_available{true};
 
     bool is_valid_isbn(const std::string isbn) const;
-    bool is_return_in_time(const Date& date) const;
 
 public:
     Book();
@@ -35,8 +33,8 @@ public:
     void set_cp_date(const Date& cp_date) { _cp_date = cp_date; }
 
     // utilities functions
-    void reserve_book(const Date& date);
-    void return_book(const Date& date);
+    void reserve_book();
+    void return_book();
 };
 
 std::ostream& operator<<(std::ostream& os, Book& b);
