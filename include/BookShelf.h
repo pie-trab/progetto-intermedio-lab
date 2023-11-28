@@ -1,9 +1,9 @@
 #ifndef BOOKSHELF_H
 #define BOOKSHELF_H
 
-#include <string>
-
 #include "Book.h"
+
+#include <string>
 
 class BookShelf
 {

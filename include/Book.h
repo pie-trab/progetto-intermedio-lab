@@ -1,9 +1,9 @@
 #ifndef BOOK_H
 #define BOOK_H
 
-#include <string>
-
 #include "Date.h"
+
+#include <string>
 
 class IllegalArgument
 {

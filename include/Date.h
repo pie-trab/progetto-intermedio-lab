@@ -1,8 +1,9 @@
 #ifndef DATE_H
 #define DATE_H
 
-#include <iostream>
 #include "Month.h"
+
+#include <iostream>
 
 class Date
 {
