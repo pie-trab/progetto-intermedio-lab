@@ -1,8 +1,8 @@
 #include "../include/Date.h"
 
-Date::Date() : d_{1}, m_{Month::jan}, y_{2023} {}
+Date::Date() : _d{1}, _m{Month::jan},_y{2023} {}
 
-Date::Date(int y, Month m, int d) : y_{y}, m_{m}, d_{d}
+Date::Date(int y, Month m, int d) :_y{y}, _m{m}, _d{d}
 {
     if (!is_valid()) {
         throw Invalid{};
@@ -11,59 +11,47 @@ Date::Date(int y, Month m, int d) : y_{y}, m_{m}, d_{d}
 
 int Date::year() const
 {
-    return y_;
+    return _y;
 }
 
 Month Date::month() const
 {
-    return m_;
+    return _m;
 }
 
 int Date::day() const
 {
-    return d_;
+    return _d;
 }
 
 bool Date::is_leap_year()
 {
-    if (y_ % 4 == 0) {
-        if (y_ % 100 == 0) {
-            if (y_ % 400 == 0) {
-                return true;
-            } else {
-                return false;
-            }
-        } else {
-            return true;
-        }
-    } else {
-        return false;
-    }
+    return (((_y % 4 == 0) && (_y % 100 != 0)) || (_y % 400 == 0));
 }
 
 bool Date::is_valid()
 {
-    if (y_ < 1800 || y_ > 2200) {
+    if (_y < 1800 ||_y > 2200) {
         return false;
     }
-    if (m_ == Month::nov || m_ == Month::apr || m_ == Month::jun || m_ == Month::sep) {
-        if (d_ < 1 || d_ > 30) {
+    if (_m == Month::nov || _m == Month::apr || _m == Month::jun || _m == Month::sep) {
+        if (_d < 1 || _d > 30) {
             return false;
         }
     }
-    if (m_ == Month::feb) {
+    if (_m == Month::feb) {
         if (is_leap_year()) {
-            if (d_ < 1 || d_ > 29) {
+            if (_d < 1 || _d > 29) {
                 return false;
             }
         } else {
-            if (d_ < 1 || d_ > 28) {
+            if (_d < 1 || _d > 28) {
                 return false;
             }
         }
     }
 
-    if (d_ < 1 || d_ > 31) {
+    if (_d < 1 || _d > 31) {
         return false;
     }
 
@@ -72,61 +60,61 @@ bool Date::is_valid()
 
 void Date::add_year(int n)
 {
-    if (y_ + n > 2200) {
+    if (_y + n > 2200) {
         throw Invalid{};
     }
-    y_ += n;
+   _y += n;
 }
 
 void Date::add_month(int n)
 {
-    if (int(m_) + n > int(Month::dec)) {
-        m_ = Month((int(m_) + n) % int(Month::dec));
-        add_year((int(m_) + n) / int(Month::dec));
+    if (int(_m) + n > int(Month::dec)) {
+        _m = Month((int(_m) + n) % int(Month::dec));
+        add_year((int(_m) + n) / int(Month::dec));
     } else {
-        m_ = Month(int(m_) + n);
+        _m = Month(int(_m) + n);
     }
 }
 
 void Date::add_one_day()
 {
-    if (m_ == Month::nov || m_ == Month::apr || m_ == Month::jun || m_ == Month::sep) {
-        if (d_ + 1 > 30) {
+    if (_m == Month::nov || _m == Month::apr || _m == Month::jun || _m == Month::sep) {
+        if (_d + 1 > 30) {
             add_month(1);
-            d_ = 1;
+            _d= 1;
         } else {
-            d_++;
+            _d++;
         }
-    } else if (m_ == Month::feb) {
+    } else if (_m == Month::feb) {
         if (is_leap_year()) {
-            if (d_ + 1 > 29) {
+            if (_d+ 1 > 29) {
                 add_month(1);
-                d_ = 1;
+                _d= 1;
             } else {
-                d_++;
+                _d++;
             }
         } else {
-            if (d_ + 1 > 28) {
+            if (_d + 1 > 28) {
                 add_month(1);
-                d_ = 1;
+                _d = 1;
             } else {
-                d_++;
+                _d++;
             }
         }
-    } else if (m_ == Month::dec) {
-        if (d_ + 1 > 31) {
+    } else if (_m == Month::dec) {
+        if (_d + 1 > 31) {
             add_year(1);
             add_month(1);
-            d_ = 1;
+            _d = 1;
         } else {
-            d_++;
+            _d++;
         }
     } else {
-        if (d_ + 1 > 31) {
+        if (_d + 1 > 31) {
             add_month(1);
-            d_ = 1;
+            _d = 1;
         } else {
-            d_++;
+            _d++;
         }
     }
 }

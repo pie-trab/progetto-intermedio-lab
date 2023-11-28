@@ -8,9 +8,9 @@
 class Date
 {
 private:
-    int y_;
-    Month m_;
-    int d_;
+    int _y;
+    Month _m;
+    int _d;
 
     bool is_valid();      // checks if the date is a valid date
     bool is_leap_year();  // checks if the year is a leap year
