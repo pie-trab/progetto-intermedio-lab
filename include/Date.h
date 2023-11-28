@@ -1,23 +1,23 @@
 #ifndef DATE_H
 #define DATE_H
 
-#include <iostream>
 #include "Month.h"
+
+#include <iostream>
+
+const int MIN_YEAR = 1;
+const int MAX_YEAR = 3000;
 
 class Date
 {
 private:
-    int y_;
-    Month m_;
-    int d_;
+    int _y;
+    Month _m;
+    int _d;
 
     bool is_valid();      // checks if the date is a valid date
     bool is_leap_year();  // checks if the year is a leap year
     void add_one_day();   // adds one day to the current date time
-
-    class Invalid
-    {
-    };
 
 public:
     Date();
