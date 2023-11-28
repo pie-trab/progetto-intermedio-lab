@@ -39,7 +39,7 @@ public:
     void return_book(const Date& date);
 };
 
-std::ostream& operator<<(std::ostream& os, Book& b);
+std::ostream& operator<<(std::ostream& os, const Book& b);
 bool operator==(const Book& a, const Book& b);
 bool operator!=(const Book& a, const Book& b);
 #endif

@@ -1,5 +1,5 @@
 Book
-gget_isbn
+get_isbn
 get_title
 get_auth_name
 get_auth_surname

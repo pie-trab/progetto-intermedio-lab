@@ -193,7 +193,7 @@ void Date::add_day(int n)
  */
 std::ostream& operator<<(std::ostream& os, const Date& d)
 {
-    return os << d.day() << "/" << int(d.month()) << "/" << d.year() << "\n";
+    return os << d.day() << "/" << int(d.month()) << "/" << d.year();
 }
 
 /**

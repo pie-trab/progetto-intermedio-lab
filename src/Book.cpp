@@ -33,9 +33,13 @@ Book::Book(std::string name, std::string surname, std::string title, std::string
  * @param isbn book's isbn
  * @param cp_date copyright date expire
  */
-Book::Book(std::string name, std::string surname, std::string title, std::string isbn, Date cp_date) : _cp_date{cp_date}
+Book::Book(std::string name, std::string surname, std::string title, std::string isbn, Date cp_date) : _auth_name{name}, _auth_surname{surname}, _title{title}, _cp_date{cp_date}
 {
-    Book(name, surname, title, isbn);
+    if (is_valid_isbn(isbn)) {
+        _isbn = isbn;
+    } else {
+        throw Exception("Isbn is not valid");
+    }
 }
 
 /**
@@ -49,6 +53,7 @@ void Book::reserve_book(const Date& date)
         _is_available = false;
         _return_date = date;
         _return_date.add_month(1);  // add custom time
+        std::cout << "Book reserved" << '\n';
     } else {
         if (is_return_in_time(date)) {
             std::cout << "The selected book is alredy reserved." << '\n';
@@ -137,10 +142,11 @@ bool operator!=(const Book& a, const Book& b)
  * @param b book to send to the stream
  * @return std::ostream&
  */
-std::ostream& operator<<(std::ostream& os, Book& b)
+std::ostream& operator<<(std::ostream& os, const Book& b)
 {
     return os << b.get_title() << '\n'
               << b.get_auth_name() << '\n'
               << b.get_auth_surname() << '\n'
-              << b.get_isbn() << '\n';
+              << b.get_isbn() << '\n'
+              << b.get_cp_date();
 }
