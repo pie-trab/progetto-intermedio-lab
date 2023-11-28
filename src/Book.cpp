@@ -2,8 +2,6 @@
 
 #include <iostream>
 
-Book::Book() {}
-
 /**
  * @brief Construct a new Book:: Book object
  *

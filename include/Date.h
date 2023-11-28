@@ -5,6 +5,9 @@
 
 #include <iostream>
 
+const int MIN_YEAR = 1;
+const int MAX_YEAR = 3000;
+
 class Date
 {
 private:

@@ -4,7 +4,7 @@
  * @brief Construct a new Date:: Date object
  *
  */
-Date::Date() : _d{1}, _m{Month::jan}, _y{2023} {}
+Date::Date() : _d{1}, _m{Month::jan}, _y{MIN_YEAR} {}
 
 /**
  * @brief Construct a new Date:: Date object
@@ -69,7 +69,7 @@ bool Date::is_leap_year()
  */
 bool Date::is_valid()
 {
-    if (_y < 1800 || _y > 2200) {
+    if (_y < MIN_YEAR || _y > MAX_YEAR) {
         return false;
     }
     if (_m == Month::nov || _m == Month::apr || _m == Month::jun || _m == Month::sep) {
@@ -103,7 +103,7 @@ bool Date::is_valid()
  */
 void Date::add_year(int n)
 {
-    if (_y + n > 2200) {
+    if (_y + n > MAX_YEAR) {
         throw Invalid{};
     }
     _y += n;

@@ -11,13 +11,13 @@ class IllegalArgument
 
 class Book
 {
-    std::string _isbn;
-    std::string _title;
-    std::string _auth_name;
-    std::string _auth_surname;
+    std::string _isbn{0};
+    std::string _title{"[no title]"};
+    std::string _auth_name{"Jhon"};
+    std::string _auth_surname{"Doe"};
     Date _cp_date;
     Date _return_date;
-    bool _is_available;
+    bool _is_available{true};
 
     // std::string strip_isbn(std::string isbn) const;
     bool is_valid_isbn(const std::string isbn) const;
@@ -37,7 +37,7 @@ public:
     Date get_cp_date() const { return _cp_date; };
     bool is_available() const { return _is_available; };
 
-    void set_cp_date(const Date cp_date) { _cp_date = cp_date; }
+    void set_cp_date(const Date& cp_date) { _cp_date = cp_date; }
 
     // utilities functions
     void reserve_book(const Date& date);
