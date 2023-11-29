@@ -46,6 +46,7 @@ BookShelf::BookShelf(std::initializer_list<Book> lst) : size{(int)lst.size()}, c
 BookShelf::BookShelf(const BookShelf& BookShelf) : size{BookShelf.size}, capacity{BookShelf.capacity}, buffer{new Book[BookShelf.size]}
 {
     std::copy(BookShelf.buffer, BookShelf.buffer + size, buffer);
+    std::cout << "copy constructor called\n";
 }
 
 /**
@@ -58,6 +59,7 @@ BookShelf::BookShelf(BookShelf&& BookShelf) : size{BookShelf.size}, capacity{Boo
     BookShelf.size = 0;
     BookShelf.capacity = INIT_CAPACITY;
     BookShelf.buffer = nullptr;
+    std::cout << "move constructor called\n";
 }
 
 /**
@@ -152,6 +154,7 @@ BookShelf& BookShelf::operator=(const BookShelf& BookShelf)
     buffer = temp;
     size = BookShelf.size;
     capacity = BookShelf.capacity;
+    std::cout << "copy operator called\n";
     return *this;
 }
 
@@ -170,6 +173,7 @@ BookShelf& BookShelf::operator=(BookShelf&& BookShelf)
     BookShelf.size = 0;
     BookShelf.capacity = INIT_CAPACITY;
     BookShelf.buffer = nullptr;
+    std::cout << "move operator called\n";
     return *this;
 }
 
