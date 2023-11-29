@@ -7,13 +7,13 @@
 constexpr int INIT_CAPACITY = 1;
 
 /**
- * @brief Construct a new Book Shelf:: Book Shelf object
+ * @brief Construct a new Book Shelf:: Book Shelf object (default constructor)
  *
  */
 BookShelf::BookShelf() : size{0}, capacity{INIT_CAPACITY}, buffer{new Book[INIT_CAPACITY]} {}
 
 /**
- * @brief Construct a new Book Shelf:: Book Shelf object
+ * @brief Construct a new Book Shelf:: Book Shelf object (parametric constructor)
  *
  * @param n numbers of book to initialize the bookshelf with
  */
@@ -61,18 +61,18 @@ BookShelf::BookShelf(BookShelf&& BookShelf) : size{BookShelf.size}, capacity{Boo
 }
 
 /**
- * @brief operator[] overload with copy
+ * @brief operator[] overload for const bookshelves
  *
  * @param i index to get
  * @return Book
  */
-Book BookShelf::operator[](int i) const
+const Book& BookShelf::operator[](int i) const
 {
     return buffer[i];
 }
 
 /**
- * @brief operator[] overload with address
+ * @brief operator[] overload for non const bookshelves
  *
  * @param i index to get
  * @return Book&
@@ -83,7 +83,7 @@ Book& BookShelf::operator[](int i)
 }
 
 /**
- * @brief Returns reference to object in index i
+ * @brief Returns reference to object in index i (for const bookshelves)
  *
  * @param i index to get
  * @return const Book&
@@ -97,7 +97,7 @@ const Book& BookShelf::at(int i) const
 }
 
 /**
- * @brief Returns reference to object in index i
+ * @brief Returns reference to object in index i (for non const bookshelves)
  *
  * @param i index to get
  * @return Book&
@@ -129,7 +129,7 @@ void BookShelf::push_back(Book elem)
  *
  * @return book to return
  */
-Book BookShelf::pop_back()
+const Book& BookShelf::pop_back()
 {
     if (size > 0) {
         size--;
@@ -139,7 +139,7 @@ Book BookShelf::pop_back()
 }
 
 /**
- * @brief Assign operator for reference
+ * @brief Assign operator (copy operator)
  *
  * @param BookShelf bookshelf to assign
  * @return BookShelf&
@@ -156,7 +156,7 @@ BookShelf& BookShelf::operator=(const BookShelf& BookShelf)
 }
 
 /**
- * @brief Assign operator for rvalue reference
+ * @brief Assign operator (move operator)
  *
  * @param BookShelf bookshelf to move
  * @return BookShelf&
@@ -184,9 +184,9 @@ int BookShelf::get_size() const
 }
 
 /**
- * @brief Reserves menmory for the buffer
+ * @brief Reserves memory for the buffer
  *
- * @param n capacity of buffer
+ * @param n new capacity of buffer
  */
 void BookShelf::reserve(int n)
 {

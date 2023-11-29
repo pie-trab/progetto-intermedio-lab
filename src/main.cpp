@@ -25,8 +25,11 @@ void copy_operator_test();
 void move_operator_test();
 BookShelf move_test();
 
+void print_bookshelf(const BookShelf& bookshelf);
+
 int main(int argc, char const* argv[])
 {
+    //BOOK TEST
     default_constructor();
     std::cout << "------------------" << '\n';
     no_date_constructor();
@@ -43,6 +46,7 @@ int main(int argc, char const* argv[])
     std::cout << "------------------" << '\n';
     test_reserve_return();
 
+    //BOOKSHELF TEST
     std::cout << "------------------" << '\n';
     default_constructor_test();
     std::cout << "------------------" << '\n';
@@ -141,7 +145,7 @@ void test_operator()
 {
     Date d(1900, Month::aug, 23);
 
-    std::cout << "operator== and operator!=: " << '\n';
+    std::cout << "operator== and operator!=: " << '\n';                                // ISBNS are different!
     Book testBook1("David", "Foster Wallace", "Una cosa divertente che non farò mai più", "900-521-837-4", d);
     Book testBook2("David", "Foster Wallace", "Una cosa divertente che non farò mai più", "800-521-837-4", d);
 
@@ -172,13 +176,16 @@ void test_reserve_return()
 void default_constructor_test()
 {
     std::cout << "Default constructor" << '\n';
-    BookShelf myVector;
+    BookShelf bookshelf;
+    print_bookshelf(bookshelf);
+
 }
 
 void int_constructor_test()
 {
     std::cout << "Constructor with int length" << '\n';
-    BookShelf myVector = BookShelf(4);
+    BookShelf bookshelf = BookShelf(4);
+    print_bookshelf(bookshelf);
 }
 
 void destructor_test()
@@ -186,7 +193,7 @@ void destructor_test()
     std::cout << "Destroier test" << '\n';
     BookShelf v1 = BookShelf(3);
     BookShelf v2;
-    v1 = v1;
+    v1 = v1; // checks if auto-assignment for the class Bookshelf generates an error
 }
 
 void copy_constructor_test()
@@ -200,19 +207,14 @@ void copy_constructor_test()
     std::cout << "Copy construtor" << '\n';
     BookShelf v1 = {testBook1, testBook2, testBook3};
     BookShelf v2 = v1;
-    for (int i = 0; i < 3; i++) {
-        std::cout << v2.at(i) << " ";
-    }
-    std::cout << '\n';
+    print_bookshelf(v2);
 }
 
 void move_constructor_test()
 {
     std::cout << "Move constructor" << '\n';
     BookShelf v = move_test();
-    for (int i = 0; i < 10; i++) {
-        std::cout << v.at(i) << " ";
-    }
+    print_bookshelf(v);
     std::cout << '\n';
 }
 
@@ -226,6 +228,7 @@ void initializer_list_constructor_test()
     Book testBook3("Robert", "Louis Stevenson", "L'isola del tesoro", "300-200-100-2", d);
 
     BookShelf v1 = {testBook1, testBook2, testBook3};
+    print_bookshelf(v1);
 }
 
 void array_element_operator_test()
@@ -238,17 +241,16 @@ void array_element_operator_test()
     Book testBook3("Robert", "Louis Stevenson", "L'isola del tesoro", "300-200-100-2", d);
 
     BookShelf v = {testBook1, testBook2};
-    std::cout << "secondo elemento: " << v[1] << std::endl;
+    std::cout << "second element: {" << v[1] << "}" << std::endl;
     v[0] = testBook3;
-    std::cout << "quarto elemento modificato: " << v[0] << std::endl;
+    std::cout << "fourth element modified: {" << v[0] << "}" << std::endl;
 }
 
 void at_test()
 {
     Date d(1900, Month::aug, 23);
 
-    std::cout << std::endl
-              << "at" << std::endl;
+    std::cout << "at method test" << std::endl;
     Book testBook1("David", "Foster Wallace", "Una cosa divertente che non farò mai più", "887-521-837-4", d);
     Book testBook2("Herman", "Melville", "Moby Dick", "800-700-600-1", d);
     Book testBook3("Robert", "Louis Stevenson", "L'isola del tesoro", "300-200-100-2", d);
@@ -256,17 +258,17 @@ void at_test()
     BookShelf v = {testBook1, testBook2, testBook3};
 
     v.at(2) = testBook1;
-    std::cout << "terzo elemento modificato: " << v.at(2) << std::endl;
-    std::cout << "secondo elemento: " << v.at(1) << std::endl;
+    std::cout << "third element modified: {" << v.at(2) << "}" << std::endl;
+    std::cout << "second element: {" << v.at(1) << "}" << std::endl;
     try {
         v.at(-3);
     } catch (Exception e) {
-        std::cout << e.get_message();
+        std::cout << e.get_message() << "\n";
     }
     try {
         v.at(100);
     } catch (Exception e) {
-        std::cout << e.get_message();
+        std::cout << e.get_message() << "\n";
     }
 }
 
@@ -274,12 +276,10 @@ void push_back_test()
 {
     std::cout << "push_back() test" << std::endl;
     BookShelf v;
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 5; i++) {
         v.push_back(Book());
     }
-    for (int i = 0; i < 20; i++) {
-        std::cout << v[i] << " ";
-    }
+    print_bookshelf(v);
     std::cout << std::endl;
 }
 
@@ -295,9 +295,8 @@ void pop_back_test()
     BookShelf v = {testBook1, testBook2, testBook3};
 
     for (int i = 0; i < 3; i++) {
-        std::cout << v.pop_back() << " ";
+        std::cout << "{" << v.pop_back() << "}\n\n";
     }
-    std::cout << '\n';
 }
 
 void copy_operator_test()
@@ -313,9 +312,7 @@ void copy_operator_test()
     BookShelf v2 = {testBook3};
     v2 = v1;
 
-    for (int i = 0; i < 2; i++) {
-        std::cout << v2.at(i) << " ";
-    }
+    print_bookshelf(v2);
     std::cout << '\n';
 }
 
@@ -324,17 +321,27 @@ void move_operator_test()
     std::cout << "Move operator test" << std::endl;
     BookShelf v;
     v = move_test();
-    for (int i = 0; i < 10; i++) {
-        std::cout << v.at(i) << " ";
-    }
+    print_bookshelf(v);
     std::cout << std::endl;
 }
 
 BookShelf move_test()
 {
     BookShelf test;
-    for (int i = 0; i < 10; i++) {
+    for (int i = 0; i < 5; i++) {
         test.push_back(Book());
     }
     return test;
+}
+
+void print_bookshelf(const BookShelf& bookshelf){
+    std::cout << "[";
+    for (int i = 0; i < bookshelf.get_size() - 1; i++)
+    {   
+        std::cout << "\n{" << bookshelf.at(i) << "},\n";
+    }
+    if(bookshelf.get_size() > 0){
+        std::cout << "\n{" << bookshelf.at(bookshelf.get_size() - 1) << "}";
+    }
+    std::cout << "\n]" << std::endl;
 }

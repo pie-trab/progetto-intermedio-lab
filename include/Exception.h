@@ -3,6 +3,9 @@
 
 #include <string>
 
+/*
+Simple class to create instances of exceptions with custom message
+*/
 class Exception
 {
     std::string _msg{""};

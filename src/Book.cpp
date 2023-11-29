@@ -3,12 +3,15 @@
 
 #include <iostream>
 
+/**
+ * @brief Construct a new Book:: Book object (default constructor)
+ */
 Book::Book()
 {
 }
 
 /**
- * @brief Construct a new Book:: Book object
+ * @brief Construct a new Book:: Book object (parametric constructor without copyright date parameter)
  *
  * @param name author name
  * @param surname author surname
@@ -25,7 +28,7 @@ Book::Book(std::string name, std::string surname, std::string title, std::string
 }
 
 /**
- * @brief Construct a new Book:: Book object
+ * @brief Construct a new Book:: Book object (parametric constructor with copyright date parameter)
  *
  * @param name author name
  * @param surname author surname
@@ -89,10 +92,9 @@ void Book::return_book(const Date& date)
  * @return true
  * @return false
  */
-bool Book::is_valid_isbn(std::string isbn) const
+bool Book::is_valid_isbn(const std::string& isbn) const
 {
     return isbn.length() == 13;
-    // return strip_isbn(isbn).length() == 10;
 }
 
 /**

@@ -2,13 +2,13 @@
 #include "../include/Exception.h"
 
 /**
- * @brief Construct a new Date:: Date object
+ * @brief Construct a new Date:: Date object (default constructor)
  *
  */
 Date::Date() : _d{1}, _m{Month::jan}, _y{MIN_YEAR} {}
 
 /**
- * @brief Construct a new Date:: Date object
+ * @brief Construct a new Date:: Date object (parametric constructor)
  *
  * @param y year
  * @param m month
@@ -197,12 +197,12 @@ std::ostream& operator<<(std::ostream& os, const Date& d)
 }
 
 /**
- * @brief
+ * @brief Equals operator overload
  *
- * @param d1
- * @param d2
- * @return true
- * @return false
+ * @param d1 first date to compare
+ * @param d2 second date to compare
+ * @return true equals
+ * @return false not equals
  */
 bool operator==(const Date& d1, const Date& d2)
 {
@@ -210,12 +210,12 @@ bool operator==(const Date& d1, const Date& d2)
 }
 
 /**
- * @brief Equals operator overload
+ * @brief Not equals operator overload
  *
  * @param d1 first date to compare
  * @param d2 second date to compare
- * @return true equals
- * @return false not equals
+ * @return true not equals
+ * @return false equals
  */
 bool operator!=(const Date& d1, const Date& d2)
 {
@@ -288,20 +288,4 @@ bool operator<=(const Date& d1, const Date& d2)
 bool operator>=(const Date& d1, const Date& d2)
 {
     return (d1 > d2) || (d1 == d2);
-}
-
-/**
- * @brief Sum operator overload
- *
- * @param d1 first date to sum
- * @param d2 second date to sum
- * @return Date
- */
-Date operator+(const Date& d1, const Date& d2)
-{
-    Date sum = d1;
-    sum.add_year(d2.year());
-    sum.add_month(int(d2.month()));
-    sum.add_day(d2.day());
-    return sum;
 }

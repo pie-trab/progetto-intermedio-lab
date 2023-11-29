@@ -3,33 +3,31 @@
 
 #include "Book.h"
 
-#include <string>
-
 class BookShelf
 {
 private:
-    int size;
-    int capacity;
+    int size;       // number of books
+    int capacity;   // capacity of the buffer
     Book* buffer;
 
-    void reserve(int);
+    void reserve(int);  // reserves memory for the buffer
 
 public:
     BookShelf();
     BookShelf(int);
     ~BookShelf();
-    BookShelf(const BookShelf&);
-    BookShelf(BookShelf&&);
-    BookShelf(std::initializer_list<Book>);
+    BookShelf(const BookShelf&);            // copy constructor
+    BookShelf(BookShelf&&);                 // move constructor
+    BookShelf(std::initializer_list<Book>); // constructor with initializer list
 
-    Book operator[](int) const;
+    const Book& operator[](int) const;
     Book& operator[](int);
     const Book& at(int) const;
     Book& at(int);
     void push_back(Book);
-    Book pop_back();
-    BookShelf& operator=(const BookShelf&);
-    BookShelf& operator=(BookShelf&&);
+    const Book& pop_back();
+    BookShelf& operator=(const BookShelf&); // copy operator
+    BookShelf& operator=(BookShelf&&);      // move operator
     int get_size() const;
 };
 
