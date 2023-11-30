@@ -97,7 +97,7 @@ The Exception class is a simple exception that allows you to launch an Exception
 
 main:
 -----------------------
-There are tests of all the methods and constructor of the class Book and BookShelf, where in the standard out is printed the result of each test.
+There are tests of all the methods and constructors of the class Book and BookShelf, where in the standard out is printed the result of each test.
 The tests were separated in several functions, then invoked in the main, for greater modularity.
 To test the constructors and movement operators of the BookShelf class we have inserted standard output prints to signal their invocation.
 If you want to test these constructors and assignment operators, you should force the compiler to use them with the "-fno-elide-constructors" option,
