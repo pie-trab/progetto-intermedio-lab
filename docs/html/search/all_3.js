@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['empty_5fvector_8',['empty_vector',['../classempty__vector.html',1,'']]]
+  ['exception_8',['Exception',['../classException.html',1,'']]]
 ];

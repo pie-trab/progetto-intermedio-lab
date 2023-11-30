@@ -76,54 +76,53 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classIllegalArgument.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIllegalArgument.html">IllegalArgument</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classBook.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBook.html">Book</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;};</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classBook.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBook.html">Book</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::string _isbn;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::string _title;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string _auth_name;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::string _auth_surname;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classDate.html">Date</a> _cp_date;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classDate.html">Date</a> _return_date;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> _is_available;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">// std::string strip_isbn(std::string isbn) const;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> is_valid_isbn(<span class="keyword">const</span> std::string isbn) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> is_return_in_time(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; date) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="classBook.html">Book</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classBook.html">Book</a>(std::string name, std::string surname, std::string title, std::string isbn);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classBook.html">Book</a>(std::string name, std::string surname, std::string title, std::string isbn, <a class="code" href="classDate.html">Date</a> cp_date);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">// get functions</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::string get_isbn()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _isbn; };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::string get_title()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _title; };</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::string get_auth_name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _auth_name; };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::string get_auth_surname()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _auth_surname; };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::string get_full_name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _auth_name + <span class="stringliteral">&quot; &quot;</span> + _auth_surname; };</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classDate.html">Date</a> get_cp_date()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _cp_date; };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> is_available()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _is_available; };</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string _isbn{<span class="stringliteral">&quot;000-000-000-0&quot;</span>};</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    std::string _title{<span class="stringliteral">&quot;[no title]&quot;</span>};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    std::string _auth_name{<span class="stringliteral">&quot;Jhon&quot;</span>};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::string _auth_surname{<span class="stringliteral">&quot;Doe&quot;</span>};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classDate.html">Date</a> _cp_date;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classDate.html">Date</a> _return_date;  <span class="comment">// stores the expected return date for the return of this book (we chose to give the costumer</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                        <span class="comment">// a month of time by default to return the book)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> _is_available{<span class="keyword">true</span>};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> is_valid_isbn(<span class="keyword">const</span> std::string&amp; isbn) <span class="keyword">const</span>;   <span class="comment">// checks the validity of the ISBN</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">bool</span> is_return_in_time(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; date) <span class="keyword">const</span>;     <span class="comment">// checks if the return date is exceded</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classBook.html#a2eac9e235a08763158f78533f7a83e1f">Book</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classBook.html#a2eac9e235a08763158f78533f7a83e1f">Book</a>(std::string name, std::string surname, std::string title, std::string isbn);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classBook.html#a2eac9e235a08763158f78533f7a83e1f">Book</a>(std::string name, std::string surname, std::string title, std::string isbn, <a class="code" href="classDate.html">Date</a> cp_date);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="comment">// get functions</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::string get_isbn()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _isbn; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::string get_title()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _title; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::string get_auth_name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _auth_name; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::string get_auth_surname()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _auth_surname; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::string get_full_name()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _auth_name + <span class="stringliteral">&quot; &quot;</span> + _auth_surname; }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; get_cp_date()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _cp_date; }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> is_available()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> _is_available; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="comment">// set function</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> set_cp_date(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; cp_date) { _cp_date = cp_date; }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> set_cp_date(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a> cp_date) { _cp_date = cp_date; }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="comment">// utilities functions</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBook.html#a0cc27ef26a8d3227940bc46399a00a54">reserve_book</a>(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; date);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBook.html#a16f5d629a5e8ade1ce4b1fec13bc09ff">return_book</a>(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; date);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <a class="code" href="classBook.html">Book</a>&amp; b);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; b);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; b);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclassBook_html"><div class="ttname"><a href="classBook.html">Book</a></div><div class="ttdef"><b>Definition:</b> Book.h:13</div></div>
-<div class="ttc" id="aclassBook_html_a0cc27ef26a8d3227940bc46399a00a54"><div class="ttname"><a href="classBook.html#a0cc27ef26a8d3227940bc46399a00a54">Book::reserve_book</a></div><div class="ttdeci">void reserve_book(const Date &amp;date)</div><div class="ttdoc">Reserve book logic.</div><div class="ttdef"><b>Definition:</b> Book.cpp:43</div></div>
-<div class="ttc" id="aclassBook_html_a16f5d629a5e8ade1ce4b1fec13bc09ff"><div class="ttname"><a href="classBook.html#a16f5d629a5e8ade1ce4b1fec13bc09ff">Book::return_book</a></div><div class="ttdeci">void return_book(const Date &amp;date)</div><div class="ttdoc">Return book logic.</div><div class="ttdef"><b>Definition:</b> Book.cpp:63</div></div>
-<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> Date.h:9</div></div>
-<div class="ttc" id="aclassIllegalArgument_html"><div class="ttname"><a href="classIllegalArgument.html">IllegalArgument</a></div><div class="ttdef"><b>Definition:</b> Book.h:9</div></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// utilities functions to manage reservation and return of the book</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBook.html#a0cc27ef26a8d3227940bc46399a00a54">reserve_book</a>(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; date);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classBook.html#a16f5d629a5e8ade1ce4b1fec13bc09ff">return_book</a>(<span class="keyword">const</span> <a class="code" href="classDate.html">Date</a>&amp; date);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;std::ostream&amp; operator&lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; b);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; b);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; a, <span class="keyword">const</span> <a class="code" href="classBook.html">Book</a>&amp; b);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassBook_html"><div class="ttname"><a href="classBook.html">Book</a></div><div class="ttdef"><b>Definition:</b> Book.h:9</div></div>
+<div class="ttc" id="aclassBook_html_a0cc27ef26a8d3227940bc46399a00a54"><div class="ttname"><a href="classBook.html#a0cc27ef26a8d3227940bc46399a00a54">Book::reserve_book</a></div><div class="ttdeci">void reserve_book(const Date &amp;date)</div><div class="ttdoc">Reserve book logic.</div><div class="ttdef"><b>Definition:</b> Book.cpp:53</div></div>
+<div class="ttc" id="aclassBook_html_a16f5d629a5e8ade1ce4b1fec13bc09ff"><div class="ttname"><a href="classBook.html#a16f5d629a5e8ade1ce4b1fec13bc09ff">Book::return_book</a></div><div class="ttdeci">void return_book(const Date &amp;date)</div><div class="ttdoc">Return book logic.</div><div class="ttdef"><b>Definition:</b> Book.cpp:74</div></div>
+<div class="ttc" id="aclassBook_html_a2eac9e235a08763158f78533f7a83e1f"><div class="ttname"><a href="classBook.html#a2eac9e235a08763158f78533f7a83e1f">Book::Book</a></div><div class="ttdeci">Book()</div><div class="ttdoc">Construct a new Book:: Book object (default constructor)</div><div class="ttdef"><b>Definition:</b> Book.cpp:9</div></div>
+<div class="ttc" id="aclassDate_html"><div class="ttname"><a href="classDate.html">Date</a></div><div class="ttdef"><b>Definition:</b> Date.h:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

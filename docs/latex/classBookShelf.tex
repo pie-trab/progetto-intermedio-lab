@@ -5,9 +5,9 @@
 \item 
 \mbox{\Hypertarget{classBookShelf_adaa5b5d4869c563222e8ac163ffa014c}\label{classBookShelf_adaa5b5d4869c563222e8ac163ffa014c}} 
 \mbox{\hyperlink{classBookShelf_adaa5b5d4869c563222e8ac163ffa014c}{Book\+Shelf}} ()
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object (default constructor) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBookShelf_ab9a13cf1c2b2aaeb18d175d6fe1b3c7a}{Book\+Shelf}} (int)
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object (parametric constructor) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBookShelf_a20f723e2457f24d544e84179cbf047cb}\label{classBookShelf_a20f723e2457f24d544e84179cbf047cb}} 
 \mbox{\hyperlink{classBookShelf_a20f723e2457f24d544e84179cbf047cb}{$\sim$\+Book\+Shelf}} ()
 \begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object. \end{DoxyCompactList}\item 
@@ -17,22 +17,22 @@
 \begin{DoxyCompactList}\small\item\em Move constructor of \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBookShelf_a7e8f7a54d0eb012208610f1d22955e50}{Book\+Shelf}} (std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{classBook}{Book}} $>$)
 \begin{DoxyCompactList}\small\item\em Initializer list construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classBook}{Book}} \mbox{\hyperlink{classBookShelf_a88e5c82bb221fdd6f6e3443f8c9ff687}{operator\mbox{[}$\,$\mbox{]}}} (int) const
-\begin{DoxyCompactList}\small\item\em operator\mbox{[}\mbox{]} overload with copy \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classBook}{Book}} \& \mbox{\hyperlink{classBookShelf_ae4a7df88a64d38874dc0801c9af81cb2}{operator\mbox{[}$\,$\mbox{]}}} (int) const
+\begin{DoxyCompactList}\small\item\em operator\mbox{[}\mbox{]} overload for const bookshelves \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBook}{Book}} \& \mbox{\hyperlink{classBookShelf_a41ba912b3c06f052ed0cc011e0a9c476}{operator\mbox{[}$\,$\mbox{]}}} (int)
-\begin{DoxyCompactList}\small\item\em operator\mbox{[}\mbox{]} overload with address \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em operator\mbox{[}\mbox{]} overload for non const bookshelves \end{DoxyCompactList}\item 
 const \mbox{\hyperlink{classBook}{Book}} \& \mbox{\hyperlink{classBookShelf_adcf33955971960c25713acfb301ce4b6}{at}} (int) const
-\begin{DoxyCompactList}\small\item\em Returns reference to object in index i. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns reference to object in index i (for const bookshelves) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBook}{Book}} \& \mbox{\hyperlink{classBookShelf_a47390c3bcc2f41c914e841386ade26ee}{at}} (int)
-\begin{DoxyCompactList}\small\item\em Returns reference to object in index i. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns reference to object in index i (for non const bookshelves) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classBookShelf_a0cb3e7654463df95b3cf5b6e2fc2a74d}{push\+\_\+back}} (\mbox{\hyperlink{classBook}{Book}})
 \begin{DoxyCompactList}\small\item\em Adds element to the end of the bookshelf. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classBook}{Book}} \mbox{\hyperlink{classBookShelf_ac7876c289f276ba349d7036fbed43c85}{pop\+\_\+back}} ()
+const \mbox{\hyperlink{classBook}{Book}} \& \mbox{\hyperlink{classBookShelf_a19c8f16134b759f5dc0f4b9f01b661df}{pop\+\_\+back}} ()
 \begin{DoxyCompactList}\small\item\em Removes element from the end and returs it. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBookShelf}{Book\+Shelf}} \& \mbox{\hyperlink{classBookShelf_a29ad26f291d3db9e8874905f5f221d12}{operator=}} (const \mbox{\hyperlink{classBookShelf}{Book\+Shelf}} \&)
-\begin{DoxyCompactList}\small\item\em Assign operator for reference. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Assign operator (copy operator) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBookShelf}{Book\+Shelf}} \& \mbox{\hyperlink{classBookShelf_a5c3094b264c0392d5c46e8c197e93691}{operator=}} (\mbox{\hyperlink{classBookShelf}{Book\+Shelf}} \&\&)
-\begin{DoxyCompactList}\small\item\em Assign operator for rvalue reference. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Assign operator (move operator) \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classBookShelf_a0be8d177d17c02dd9061212f0203eaab}{get\+\_\+size}} () const
 \begin{DoxyCompactList}\small\item\em Returns bookshelf size. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -46,7 +46,7 @@ int \mbox{\hyperlink{classBookShelf_a0be8d177d17c02dd9061212f0203eaab}{get\+\_\+
 
 
 
-Construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object. 
+Construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: \mbox{\hyperlink{classBook}{Book}} Shelf object (parametric constructor) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -109,7 +109,7 @@ Initializer list construct a new \mbox{\hyperlink{classBook}{Book}} Shelf\+:\+: 
 
 
 
-Returns reference to object in index i. 
+Returns reference to object in index i (for non const bookshelves) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -127,7 +127,7 @@ Returns reference to object in index i.
 
 
 
-Returns reference to object in index i. 
+Returns reference to object in index i (for const bookshelves) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -158,7 +158,7 @@ int size
 
 
 
-Assign operator for rvalue reference. 
+Assign operator (move operator) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -176,7 +176,7 @@ Assign operator for rvalue reference.
 
 
 
-Assign operator for reference. 
+Assign operator (copy operator) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -194,7 +194,7 @@ Assign operator for reference.
 
 
 
-operator\mbox{[}\mbox{]} overload with address 
+operator\mbox{[}\mbox{]} overload for non const bookshelves 
 
 
 \begin{DoxyParams}{Parameters}
@@ -204,15 +204,15 @@ operator\mbox{[}\mbox{]} overload with address
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classBook}{Book}}\& 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classBookShelf_a88e5c82bb221fdd6f6e3443f8c9ff687}\label{classBookShelf_a88e5c82bb221fdd6f6e3443f8c9ff687}} 
+\mbox{\Hypertarget{classBookShelf_ae4a7df88a64d38874dc0801c9af81cb2}\label{classBookShelf_ae4a7df88a64d38874dc0801c9af81cb2}} 
 \index{BookShelf@{BookShelf}!operator\mbox{[}\mbox{]}@{operator[]}}
 \index{operator\mbox{[}\mbox{]}@{operator[]}!BookShelf@{BookShelf}}
 \doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classBook}{Book}} Book\+Shelf\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classBook}{Book}} \& Book\+Shelf\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{i }\end{DoxyParamCaption}) const}
 
 
 
-operator\mbox{[}\mbox{]} overload with copy 
+operator\mbox{[}\mbox{]} overload for const bookshelves 
 
 
 \begin{DoxyParams}{Parameters}
@@ -222,11 +222,11 @@ operator\mbox{[}\mbox{]} overload with copy
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{classBook}{Book}} 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classBookShelf_ac7876c289f276ba349d7036fbed43c85}\label{classBookShelf_ac7876c289f276ba349d7036fbed43c85}} 
+\mbox{\Hypertarget{classBookShelf_a19c8f16134b759f5dc0f4b9f01b661df}\label{classBookShelf_a19c8f16134b759f5dc0f4b9f01b661df}} 
 \index{BookShelf@{BookShelf}!pop\_back@{pop\_back}}
 \index{pop\_back@{pop\_back}!BookShelf@{BookShelf}}
 \doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classBook}{Book}} Book\+Shelf\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classBook}{Book}} \& Book\+Shelf\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 

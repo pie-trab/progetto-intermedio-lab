@@ -71,11 +71,15 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a2eac9e235a08763158f78533f7a83e1f"><td class="memItemLeft" align="right" valign="top"><a id="a2eac9e235a08763158f78533f7a83e1f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBook.html#a2eac9e235a08763158f78533f7a83e1f">Book</a> ()</td></tr>
+<tr class="memdesc:a2eac9e235a08763158f78533f7a83e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object (default constructor) <br /></td></tr>
+<tr class="separator:a2eac9e235a08763158f78533f7a83e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae78a03a13259936379b88f7a822db353"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBook.html#ae78a03a13259936379b88f7a822db353">Book</a> (std::string name, std::string surname, std::string title, std::string isbn)</td></tr>
-<tr class="memdesc:ae78a03a13259936379b88f7a822db353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object.  <a href="classBook.html#ae78a03a13259936379b88f7a822db353">More...</a><br /></td></tr>
+<tr class="memdesc:ae78a03a13259936379b88f7a822db353"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object (parametric constructor without copyright date parameter)  <a href="classBook.html#ae78a03a13259936379b88f7a822db353">More...</a><br /></td></tr>
 <tr class="separator:ae78a03a13259936379b88f7a822db353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6834e4f83740f9328780478fbebf0277"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBook.html#a6834e4f83740f9328780478fbebf0277">Book</a> (std::string name, std::string surname, std::string title, std::string isbn, <a class="el" href="classDate.html">Date</a> cp_date)</td></tr>
-<tr class="memdesc:a6834e4f83740f9328780478fbebf0277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object.  <a href="classBook.html#a6834e4f83740f9328780478fbebf0277">More...</a><br /></td></tr>
+<tr class="memdesc:a6834e4f83740f9328780478fbebf0277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object (parametric constructor with copyright date parameter)  <a href="classBook.html#a6834e4f83740f9328780478fbebf0277">More...</a><br /></td></tr>
 <tr class="separator:a6834e4f83740f9328780478fbebf0277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8df24f43320f7740660e57cf446e0ba"><td class="memItemLeft" align="right" valign="top"><a id="aa8df24f43320f7740660e57cf446e0ba"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_isbn</b> () const</td></tr>
@@ -92,15 +96,15 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_auth_surna
 <tr class="memitem:a82818ecf1363a60cd974ec53d7db0714"><td class="memItemLeft" align="right" valign="top"><a id="a82818ecf1363a60cd974ec53d7db0714"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_full_name</b> () const</td></tr>
 <tr class="separator:a82818ecf1363a60cd974ec53d7db0714"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5918b47b7fab8c9c3e8d1f07ec51b7ee"><td class="memItemLeft" align="right" valign="top"><a id="a5918b47b7fab8c9c3e8d1f07ec51b7ee"></a>
-<a class="el" href="classDate.html">Date</a>&#160;</td><td class="memItemRight" valign="bottom"><b>get_cp_date</b> () const</td></tr>
-<tr class="separator:a5918b47b7fab8c9c3e8d1f07ec51b7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cf3c5b610357f53149ed1331bd1fde5"><td class="memItemLeft" align="right" valign="top"><a id="a9cf3c5b610357f53149ed1331bd1fde5"></a>
+const <a class="el" href="classDate.html">Date</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>get_cp_date</b> () const</td></tr>
+<tr class="separator:a9cf3c5b610357f53149ed1331bd1fde5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab58e5bdee0f7a345c380f287e6fac79f"><td class="memItemLeft" align="right" valign="top"><a id="ab58e5bdee0f7a345c380f287e6fac79f"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_available</b> () const</td></tr>
 <tr class="separator:ab58e5bdee0f7a345c380f287e6fac79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e87f3e86175a61bfb6347dd38a4616b"><td class="memItemLeft" align="right" valign="top"><a id="a2e87f3e86175a61bfb6347dd38a4616b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_cp_date</b> (const <a class="el" href="classDate.html">Date</a> cp_date)</td></tr>
-<tr class="separator:a2e87f3e86175a61bfb6347dd38a4616b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa57a0feac3e4210a905e4f23ad4f6606"><td class="memItemLeft" align="right" valign="top"><a id="aa57a0feac3e4210a905e4f23ad4f6606"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_cp_date</b> (const <a class="el" href="classDate.html">Date</a> &amp;cp_date)</td></tr>
+<tr class="separator:aa57a0feac3e4210a905e4f23ad4f6606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cc27ef26a8d3227940bc46399a00a54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBook.html#a0cc27ef26a8d3227940bc46399a00a54">reserve_book</a> (const <a class="el" href="classDate.html">Date</a> &amp;date)</td></tr>
 <tr class="memdesc:a0cc27ef26a8d3227940bc46399a00a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserve book logic.  <a href="classBook.html#a0cc27ef26a8d3227940bc46399a00a54">More...</a><br /></td></tr>
 <tr class="separator:a0cc27ef26a8d3227940bc46399a00a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,7 +151,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_cp_date</b> (cons
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object. </p>
+<p>Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object (parametric constructor without copyright date parameter) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>author name </td></tr>
@@ -204,7 +208,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>set_cp_date</b> (cons
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object. </p>
+<p>Construct a new <a class="el" href="classBook.html">Book</a>:: <a class="el" href="classBook.html">Book</a> object (parametric constructor with copyright date parameter) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>author name </td></tr>

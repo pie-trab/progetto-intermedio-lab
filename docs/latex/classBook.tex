@@ -3,10 +3,13 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classBook_a2eac9e235a08763158f78533f7a83e1f}\label{classBook_a2eac9e235a08763158f78533f7a83e1f}} 
+\mbox{\hyperlink{classBook_a2eac9e235a08763158f78533f7a83e1f}{Book}} ()
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object (default constructor) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBook_ae78a03a13259936379b88f7a822db353}{Book}} (std\+::string name, std\+::string surname, std\+::string title, std\+::string isbn)
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object (parametric constructor without copyright date parameter) \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classBook_a6834e4f83740f9328780478fbebf0277}{Book}} (std\+::string name, std\+::string surname, std\+::string title, std\+::string isbn, \mbox{\hyperlink{classDate}{Date}} cp\+\_\+date)
-\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object (parametric constructor with copyright date parameter) \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classBook_aa8df24f43320f7740660e57cf446e0ba}\label{classBook_aa8df24f43320f7740660e57cf446e0ba}} 
 std\+::string {\bfseries get\+\_\+isbn} () const
 \item 
@@ -22,14 +25,14 @@ std\+::string {\bfseries get\+\_\+auth\+\_\+surname} () const
 \mbox{\Hypertarget{classBook_a82818ecf1363a60cd974ec53d7db0714}\label{classBook_a82818ecf1363a60cd974ec53d7db0714}} 
 std\+::string {\bfseries get\+\_\+full\+\_\+name} () const
 \item 
-\mbox{\Hypertarget{classBook_a5918b47b7fab8c9c3e8d1f07ec51b7ee}\label{classBook_a5918b47b7fab8c9c3e8d1f07ec51b7ee}} 
-\mbox{\hyperlink{classDate}{Date}} {\bfseries get\+\_\+cp\+\_\+date} () const
+\mbox{\Hypertarget{classBook_a9cf3c5b610357f53149ed1331bd1fde5}\label{classBook_a9cf3c5b610357f53149ed1331bd1fde5}} 
+const \mbox{\hyperlink{classDate}{Date}} \& {\bfseries get\+\_\+cp\+\_\+date} () const
 \item 
 \mbox{\Hypertarget{classBook_ab58e5bdee0f7a345c380f287e6fac79f}\label{classBook_ab58e5bdee0f7a345c380f287e6fac79f}} 
 bool {\bfseries is\+\_\+available} () const
 \item 
-\mbox{\Hypertarget{classBook_a2e87f3e86175a61bfb6347dd38a4616b}\label{classBook_a2e87f3e86175a61bfb6347dd38a4616b}} 
-void {\bfseries set\+\_\+cp\+\_\+date} (const \mbox{\hyperlink{classDate}{Date}} cp\+\_\+date)
+\mbox{\Hypertarget{classBook_aa57a0feac3e4210a905e4f23ad4f6606}\label{classBook_aa57a0feac3e4210a905e4f23ad4f6606}} 
+void {\bfseries set\+\_\+cp\+\_\+date} (const \mbox{\hyperlink{classDate}{Date}} \&cp\+\_\+date)
 \item 
 void \mbox{\hyperlink{classBook_a0cc27ef26a8d3227940bc46399a00a54}{reserve\+\_\+book}} (const \mbox{\hyperlink{classDate}{Date}} \&date)
 \begin{DoxyCompactList}\small\item\em Reserve book logic. \end{DoxyCompactList}\item 
@@ -46,7 +49,7 @@ void \mbox{\hyperlink{classBook_a16f5d629a5e8ade1ce4b1fec13bc09ff}{return\+\_\+b
 
 
 
-Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. 
+Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object (parametric constructor without copyright date parameter) 
 
 
 \begin{DoxyParams}{Parameters}
@@ -67,7 +70,7 @@ Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classB
 
 
 
-Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object. 
+Construct a new \mbox{\hyperlink{classBook}{Book}}\+:\+: \mbox{\hyperlink{classBook}{Book}} object (parametric constructor with copyright date parameter) 
 
 
 \begin{DoxyParams}{Parameters}

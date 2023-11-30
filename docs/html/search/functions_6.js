@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pop_5fback_40',['pop_back',['../classBookShelf.html#ac7876c289f276ba349d7036fbed43c85',1,'BookShelf']]],
-  ['push_5fback_41',['push_back',['../classBookShelf.html#a0cb3e7654463df95b3cf5b6e2fc2a74d',1,'BookShelf']]]
+  ['pop_5fback_36',['pop_back',['../classBookShelf.html#a19c8f16134b759f5dc0f4b9f01b661df',1,'BookShelf']]],
+  ['push_5fback_37',['push_back',['../classBookShelf.html#a0cb3e7654463df95b3cf5b6e2fc2a74d',1,'BookShelf']]]
 ];
