@@ -44,7 +44,7 @@ La classe Exception rappresenta una semplice eccezione che permette di lanciare 
 
 main:
 -----------------------
-Sono presenti i test di tutti i metodi e costruttore della classe Book e BookShelf, dove tramite standard output viene stampato l’esito di ogni test. 
+Sono presenti i test di tutti i metodi e costruttori della classe Book e BookShelf, dove tramite standard output viene stampato l’esito di ogni test. 
 I test sono stati separati in diverse funzioni, poi richiamate nel main, per una maggiore modularità. 
 Per testare il costruttore e operatore di movimento della classe BookShelf abbiamo inserito delle stampe a standard output per segnalare la loro invocazione.
 Qualora si vogliano testare tali costruttore e operatore di assegnamento sarà opportuno forzare il compilatore al loro utilizzo
